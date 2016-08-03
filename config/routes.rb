@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  devise_for :users
   post 'contacts/new' => 'contacts#new' 
 
   resources :blogs, only: [:index, :new, :create, :edit, :update ,:destroy] do
