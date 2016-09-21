@@ -2,12 +2,12 @@ class BlogsController < ApplicationController
    before_action :authenticate_user!
 
   before_action :set_blog, only: [:edit, :update, :destroy]
-  
+
   def confirm
     @blog = Blog.new(blogs_params)
     render :new if @blog.invalid?
   end
-  
+
   def index
     @blogs = Blog.all
   end
@@ -19,12 +19,12 @@ class BlogsController < ApplicationController
       @blog = Blog.new
     end
   end
-  
+
   def edit
     @blogs = Blog.all
     @blog = Blog.find(params[:id])
   end
-  
+
   def update
     # edit, update, destroyで共通コード
     @blog = Blog.find(params[:id])
@@ -42,20 +42,19 @@ class BlogsController < ApplicationController
     @blog.destroy
     redirect_to blogs_path, notice: "ブログを削除しました！"
   end
-  
+
   def create
     @blog = Blog.new(blogs_params)
     @blog.user_id = current_user.id
     if @blog.save
-      # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
       redirect_to blogs_path, notice: "ブログを作成しました！"
+      NoticeMailer.sendmail_blog(@blog).deliver
     else
-      # 入力フォームを再描画します。
       render action: 'new'
     end
   end
-  
-  
+
+
 
   private
     def blogs_params
