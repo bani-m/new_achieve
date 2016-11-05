@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
@@ -25,7 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'carrierwave'
+gem 'rmagick'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -34,7 +37,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'pry-rails'
+  gem 'better_errors'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -58,4 +62,5 @@ gem 'cancan'
 
 group :development do
   gem 'letter_opener_web'
+  gem 'dotenv-rails'
 end
