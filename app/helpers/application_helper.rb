@@ -1,4 +1,4 @@
-  module ApplicationHelper
+module ApplicationHelper
   def profile_img(user)
     return image_tag(user.avatar, alt: user.name) if user.avatar?
 
@@ -44,7 +44,6 @@ module ActionView
       def error_css(method, options = {})
         @template.error_css(@object_name, method, options.merge(object: @object))
       end
-      end
-
-
+    end
   end
+end
