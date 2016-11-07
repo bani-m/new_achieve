@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:confirmable, :omniauthable
   mount_uploader :avatar, AvatarUploader #deviseの設定配下に追記
-end
+
 
 
 def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
@@ -55,3 +55,4 @@ def self.find_for_twitter_oauth(auth, signed_in_resource = nil)
       update_without_password(params, *options)
     end
   end
+end
