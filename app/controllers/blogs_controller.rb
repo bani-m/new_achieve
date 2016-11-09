@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-   before_action :authenticate_user!
+ before_action :authenticate_user!
 
   before_action :set_blog, only: [:edit, :update, :destroy]
 
@@ -9,6 +9,7 @@ class BlogsController < ApplicationController
   end
 
   def index
+    def profile_img(user)
     @blogs = Blog.all
   end
 
