@@ -5,8 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,:confirmable, :omniauthable
   mount_uploader :avatar, AvatarUploader #deviseの設定配下に追記
 
-  def profile_img(user)
-  end
 
 def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.find_by(email: auth.info.email)
