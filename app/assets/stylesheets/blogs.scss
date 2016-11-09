@@ -14,7 +14,9 @@
 input[type="submit"].btn-block{
   margin: 15px 0;
 }
-
+img{
+  max-height :200px;
+}
 .page-top-btn {
   display: block;
   border-radius: 50px;
@@ -36,7 +38,4 @@ input[type="submit"].btn-block{
   &:hover {
   opacity: 0.7;
   }
-}
-img{
-  max-height :200px;
 }
