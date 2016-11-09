@@ -9,7 +9,6 @@ class BlogsController < ApplicationController
   end
 
   def index
-    def profile_img(user)
     @blogs = Blog.all
   end
 
