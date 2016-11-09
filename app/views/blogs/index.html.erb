@@ -6,6 +6,8 @@
     <% @blogs.each do |blog| %>
     <div class="row">
       <h4><strong><%= blog.title %></strong></h4>
+
+      <% @user = blog.user %>
       <p><%= profile_img(@user) if profile_img(@user) %></p>
       <p><%= blog.content %></p>
       <p><%= blog.user_id %></p>

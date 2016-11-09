@@ -9,8 +9,6 @@ class BlogsController < ApplicationController
   end
 
   def index
-    @user = Blog.new(blogs_params)
-    @user.user_id = current_user.id
     @blogs = Blog.all
   end
 
