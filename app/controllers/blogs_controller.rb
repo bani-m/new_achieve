@@ -9,7 +9,7 @@ class BlogsController < ApplicationController
   end
 
   def index
-    @user = blog.user
+    @user = Blog.user
     @blogs = Blog.all
   end
 
