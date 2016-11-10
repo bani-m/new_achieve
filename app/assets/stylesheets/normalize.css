@@ -4,8 +4,10 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
- img{
-   max-height :200px;
+ .image-resize {
+   max-width: 180px;
+   max-height: 180px;
+   -ms-interpolation-mode: bicubic;
  }
  
 html {
