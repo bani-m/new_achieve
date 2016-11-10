@@ -1,4 +1,6 @@
-.// Place all the styles related to the blogs controller here.
+img{
+  max-height :200px;
+}.// Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .wrapper {
@@ -15,7 +17,7 @@ input[type="submit"].btn-block{
   margin: 15px 0;
 }
 img{
-  max-height :200px;
+  max-height :100px;
 }
 .page-top-btn {
   display: block;
