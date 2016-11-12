@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  post 'contacts/new' => 'contacts#new'
+  
 
   resources :blogs, only: [:index, :new, :create, :edit, :update ,:destroy] do
     collection do
