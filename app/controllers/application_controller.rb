@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    before_action :authenticate_user!, only: :contacts
+    before_action :authenticate_user!, only: :contacts/new
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to main_app.root_url, :alert => exception.message
   end  # Prevent CSRF attacks by raising an exception.
