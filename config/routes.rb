@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  
+  post 'contacts/new' => 'contacts#new'
 
   resources :blogs, only: [:index, :new, :create, :edit, :update ,:destroy] do
     collection do
@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
   devise_for :users, controllers: {
-    registrations: "users/registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
 }
   # The priority is based upon order of creation: first created -> highest priority.
