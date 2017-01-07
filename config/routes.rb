@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
-  resources :blogs do
+
+  devise_for :users, controllers: {
+  registrations: "users/registrations",
+  omniauth_callbacks: "users/omniauth_callbacks"
+  }
+
+resources :relationships, only: [:create, :destroy]
+
+resources :users, only: [:index, :show]
+root 'top#index'
+resources :blogs do
 resources :comments
 
 collection do
@@ -15,11 +25,10 @@ end
 
 mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-devise_for :users, controllers: {
-registrations: "users/registrations",
-omniauth_callbacks: "users/omniauth_callbacks"
-}
 
-root 'top#index'
+
+
+
+
 
 end
