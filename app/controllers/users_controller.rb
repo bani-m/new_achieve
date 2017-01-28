@@ -3,9 +3,16 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show
+def show
 @user = User.find(params[:id])
-@users = User.all
+end
+
+def followed_users
+  @users = @user.followed_users
+end
+
+def followers
+  @users = @user.followers
 end
 
 
