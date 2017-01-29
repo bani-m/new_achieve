@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = {host: 'limitless-journey-43418.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: ' desolate-castle-79448.herokuapp.com'}
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
   {
