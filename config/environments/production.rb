@@ -1,5 +1,9 @@
 Rails.application.configure do
+<<<<<<< HEAD
   config.action_mailer.default_url_options = {host:'desolate-castle-79448.herokuapp.com'}
+=======
+  config.action_mailer.default_url_options = {host: ' desolate-castle-79448.herokuapp.com'}
+>>>>>>> f74a27422053e2cac31fd76498fd4506cc3bbbaa
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
   {
