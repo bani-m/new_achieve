@@ -15,6 +15,8 @@ class BlogsController < ApplicationController
   def show
     @comment = @blog.comments.build
     @comments = @blog.comments
+    Notification.find(params[:notification_id]).update(read: true) if params[:notification_id]
+   end
   end
 
   def new
@@ -31,9 +33,7 @@ class BlogsController < ApplicationController
   end
 
   def update
-    # edit, update, destroyで共通コード
     @blog = Blog.find(params[:id])
-
     if @blog.update(blogs_params)
       redirect_to blogs_path, notice: "ブログを更新しました！"
     else
@@ -42,11 +42,10 @@ class BlogsController < ApplicationController
   end
 
   def destroy
-    # edit, update, destroyで共通コード
     @blog = Blog.find(params[:id])
     @blog.destroy
     redirect_to blogs_path, notice: "ブログを削除しました！"
-  end
+   end
 
   def create
     @blog = Blog.new(blogs_params)
@@ -57,7 +56,7 @@ class BlogsController < ApplicationController
     else
       render  'new'
     end
-  end
+   end
 
 
 
@@ -70,4 +69,3 @@ class BlogsController < ApplicationController
     def set_blog
       @blog = Blog.find(params[:id])
     end
-end
