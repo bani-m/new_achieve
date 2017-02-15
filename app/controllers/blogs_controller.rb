@@ -17,7 +17,6 @@ class BlogsController < ApplicationController
     @comments = @blog.comments
     Notification.find(params[:notification_id]).update(read: true) if params[:notification_id]
    end
-  end
 
   def new
     if params[:back]
@@ -37,7 +36,7 @@ class BlogsController < ApplicationController
     if @blog.update(blogs_params)
       redirect_to blogs_path, notice: "ブログを更新しました！"
     else
-      render action: 'edit'
+      render 'edit'
     end
   end
 
@@ -64,7 +63,7 @@ class BlogsController < ApplicationController
     def blogs_params
       params.require(:blog).permit(:title, :content, :user_id, :name)
     end
-
+end
     # idをキーとして値を取得するメソッド
     def set_blog
       @blog = Blog.find(params[:id])
