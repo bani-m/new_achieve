@@ -48,8 +48,9 @@ end
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
-gem 'rails_12factor', group: :production
-
+group :production, :staging do
+  gem 'rails_12factor'
+end
 gem 'devise'
 
 gem 'faker'
