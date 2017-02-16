@@ -53,6 +53,8 @@ group :production, :staging do
 end
 gem 'devise'
 
+gem 'capistrano-rails'
+
 gem 'faker'
 
 gem 'forgery'
