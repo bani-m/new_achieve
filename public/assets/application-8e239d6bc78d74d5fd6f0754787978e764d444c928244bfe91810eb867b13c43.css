@@ -2601,6 +2601,11 @@ h2 {
   -webkit-border-radius: 10px;
   background: #f0e68c;
 }
+
+/* line 26, /home/vagrant/workspace/new_achieve/app/assets/stylesheets/notifications.scss */
+ul {
+  margin-bottom: 100px;
+}
 /* line 1, /home/vagrant/workspace/new_achieve/app/assets/stylesheets/top.scss */
 body {
   width: 100%;
