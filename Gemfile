@@ -63,6 +63,8 @@ gem 'rails_admin'
 
 gem 'cancan'
 
+gem 'pg', group: :production
+
 group :development do
   gem 'letter_opener_web'
   gem 'dotenv-rails'
