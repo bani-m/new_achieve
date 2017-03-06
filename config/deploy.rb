@@ -1,7 +1,7 @@
 lock '3.6.0'
 
 # デプロイするアプリケーション名
-set :application, 'new_achieve'
+set :application, 'achieve'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
 set :repo_url, 'https://github.com/bani-m/new_achieve.git'
@@ -10,7 +10,7 @@ set :repo_url, 'https://github.com/bani-m/new_achieve.git'
 set :branch, ENV['BRANCH'] || 'master'
 
 # deploy先のディレクトリ。
-set :deploy_to, '/var/www/achieve'
+set :deploy_to, '/var/www/'achieve'
 
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
