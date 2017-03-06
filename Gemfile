@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails'
+gem 'unicorn'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
