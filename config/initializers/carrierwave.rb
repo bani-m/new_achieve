@@ -12,13 +12,13 @@ CarrierWave.configure do |config|
 
   case Rails.env
    when 'test'
-    config.fog_directory = 'テスト環境用のバケット名'
-    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/テスト環境用のバケット名'
+    config.fog_directory = 'achieve-test-itaru'
+    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/achieve-test-itaru'
     when 'production'
-      config.fog_directory = '本番環境用のバケット名'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/本番環境用のバケット名'
+      config.fog_directory = 'achieve-production-itaru'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/achieve-production-itaru'
     when 'development'
-      config.fog_directory = '開発環境用のバケット名'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/開発環境用のバケット名'
+      config.fog_directory = 'achieve-development-itaru'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/achieve-development-itaru'
   end
 end
