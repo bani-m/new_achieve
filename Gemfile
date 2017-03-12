@@ -35,7 +35,7 @@ gem 'carrierwave'
 gem 'rmagick'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'therubyracer', platforms: :ruby
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development, :test do
