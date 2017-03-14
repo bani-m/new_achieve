@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 gem 'rmagick'
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 gem 'therubyracer', platforms: :ruby
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -57,6 +57,8 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
 group :production, :staging do
+  gem 'dotenv-rails'
+  gem 'unicorn'
   gem 'rails_12factor'
 end
 gem 'devise'
@@ -72,6 +74,7 @@ gem 'rails_admin'
 gem 'cancan'
 
 gem 'pg', group: :production
+gem 'unicorn', group: :production
 
 group :development do
   gem 'letter_opener_web'
