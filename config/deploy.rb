@@ -4,7 +4,7 @@ lock '3.6.0'
 set :application, 'new_achieve'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
-set :repo_url, 'https://github.com/bani-m/new_achieve'
+set :repo_url, 'https://github.com/bani-m/new_achieve.git'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
 set :branch, ENV['BRANCH'] || 'master'
