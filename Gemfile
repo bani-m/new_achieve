@@ -62,7 +62,14 @@ group :production, :staging do
   gem 'rails_12factor'
 end
 gem 'devise'
-
+gem 'therubyracer', platforms: :ruby
+group :development, :test do
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+end
 gem 'capistrano-rails'
 
 gem 'faker'
