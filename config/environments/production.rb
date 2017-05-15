@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: 'dry-basin-79486.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: '52.199.215.106' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
   {
